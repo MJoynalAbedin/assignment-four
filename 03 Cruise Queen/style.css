@@ -143,6 +143,7 @@ nav ul li a:hover, a.active{
     margin-left: 180px;
     text-align: center;
     padding: 20px;
+    display: none;
 }
 .success-interface h1, h2, p, h3{
     color: rgb(94, 61, 38);
