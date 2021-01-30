@@ -57,7 +57,7 @@ nav ul li a:hover, a.active{
     font-weight: 500;
 }
 .booking-form{
-    background-color: #fff;
+    background-color: rgb(241, 158, 149);
     border: 1px solid #ddd;
     padding: 10px;
     border-radius: 5px;
@@ -124,8 +124,26 @@ nav ul li a:hover, a.active{
 }
 .btnStyle{
     border: none;
-    background-color: white;
+    background-color: rgb(241, 158, 149);
     font-size: 35px;
-    color: #294df1;
+    color: #fff;
     outline: none;
+}
+.text-center{
+    text-align: center;
+}
+.success-interface{
+    background-color: rgb(235, 189, 183);
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    float: right;
+    width: 65%;
+    margin-top: 150px;;
+    margin-left: 180px;
+    text-align: center;
+    padding: 20px;
+}
+.success-interface h1, h2, p, h3{
+    color: rgb(94, 61, 38);
 }

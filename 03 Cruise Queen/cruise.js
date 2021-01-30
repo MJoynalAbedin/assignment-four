@@ -30,10 +30,35 @@ function ticketNumPriceCounter(isPlus, ticketCountId) {
     document.getElementById('subtotal').innerText = subtotal;
 
     //Vat Part
-
-    var totalVatPrice = subtotal * (10 / 100) + subtotal;
-
+    var vat = subtotal * (10 / 100);
+    var totalVatPrice = vat + subtotal;
     document.getElementById('total').innerText = totalVatPrice;
+    document.getElementById('vatShow').innerText = vat;
 
+}
+
+function successPurchase() {
+    var totalPrice = parseInt(document.getElementById('total').innerText);
+
+    if (totalPrice > 100) {
+        document.getElementById('form').style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+
+        toShowInSuccess('showNumberOfFirstClass', 'countOfFirstClass');
+        toShowInSuccess('showNumberOfEconomy', 'countOfEconomy');
+        showTotalVatPrice()
+    }
+}
+
+
+function toShowInSuccess(showNumberInSuccess, getCountFromInput, totalVatPrice, showVatPrice) {
+
+    var toShowTicketCount = document.getElementById(showNumberInSuccess);
+    return toShowTicketCount.innerText = document.getElementById(getCountFromInput).value;
+}
+
+function showTotalVatPrice() {
+    var totalVatPrice = document.getElementById('total').innerText;
+    document.getElementById('showTotalCost').innerText = totalVatPrice;
 }
 

@@ -35,14 +35,14 @@
         </div>
 
 
-        <div class="booking-form">
-            <h3>Book Ocean Time</h3>
+        <div id="form" class="booking-form">
+            <h3 class="text-center">Book Ocean Time</h3>
             <div class="input-group">
-                <label for="">Flying From</label>
+                <label for="">Sailing From</label>
                 <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
             </div>
             <div class="input-group">
-                <label for="">Flying To</label>
+                <label for="">Sailing To</label>
                 <input class="inp-style" type="text" name="" placeholder="New York, United States">
             </div>
             <div class="inputs">
@@ -91,10 +91,10 @@
                         <p>Charge 10% VAT</p>
                     </div>
                     <div class="right">
-                        <p>$25</p>
+                        <p>$ <span id="vatShow">25</span> </p>
                     </div>
                 </div>
-                <hr>
+                <hr><br>
                 <div class="amount">
                     <div class="left">
                         <h4>Total</h4>
@@ -104,7 +104,14 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button onclick="successPurchase()" class="btn-style">Book Now</button>
+        </div>
+        <div id="formSuccess" class="success-interface">
+            <h1>Congratulations!</h1><br>
+            <h2>You've successfully purchased your Tickets</h2><br>
+            <p>You have <span id="showNumberOfFirstClass">00</span> First Class Tickets</p><br>
+            <p>And <span id="showNumberOfEconomy">00</span> Economy Tickets</p><br>
+            <h3>Total Cost With VAT $<span id="showTotalCost">00</span></h3>
         </div>
     </main>
 
